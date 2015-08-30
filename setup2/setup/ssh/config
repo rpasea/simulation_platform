@@ -1,0 +1,7 @@
+Host *
+	StrictHostKeyChecking	no
+	UserKnownHostsFile=/dev/null
+	IdentityFile	~/.ssh/hyccups_rsa
+	XAuthLocation /usr/bin/xauth
+	ForwardAgent yes
+	ForwardX11 yes

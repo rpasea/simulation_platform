@@ -1,0 +1,33 @@
+Radu Pasea SCPD
+
+Distributed simulation platform based on Android VMs
+
+Proiectul este continuarea cercetarii pe semestrul 2 de anul trecut si consta
+in gasirea solutiilor pentru 2 challenge-uri:
+        - simularea retelelor oportunistice
+        - simularea unor dispozitive ce ruleaza Android
+
+Articolul se gaseste in fisierul: "Distributed simulation platform based on Android VMs".
+
+Desi rezultatele sunt incurajatoare, proiectul este inca intr-un stadiu de
+cercetare asa ca am atasat ca si componenta practica unul din experimentele
+pe care le-am facut pentru a testa solutiile propuse.
+
+Experimentul se afla bazeaza pe:
+        - python3
+        - 2 containere LXC cu numele "ubuntu1" si "ubuntu2", care au urmatoarele
+proprietatie setate:
+                - lxc.network.type = veth
+                - lxc.network.veth.pair = veth1, respectiv veth2 pt "ubuntu2"
+                - lxc.network.flags = up
+        - pachetul python-lxc instalat
+        - drepturi de root
+
+Experimentul construieste 2 LAN-uri separate in care plaseaza cele 2 containere
+si realizeaza un scan ARP, apoi se muta la runtime containerul 1 in LAN-ul 
+celui de-al doilea si se mai realizeaza un scan ARP. Prima data cele 2
+containere se vad in retele separate, iar a doua oara se vad in acelasi LAN.
+
+Fisierele sursa se afla in directorul src si experimentul se ruleaza astfel:
+
+   sudo python3 lxc_test.py

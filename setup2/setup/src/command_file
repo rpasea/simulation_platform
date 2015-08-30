@@ -1,0 +1,35 @@
+{
+    "hosts": [
+    ],
+    "py/object": "simulation_platform.command_file.json_classes.CommandFile",
+    "simulation": {
+        "duration": 300,
+        "events": [
+            {
+                "address": "10.1.1.0",
+                "netmask": "255.255.255.0",
+                "py/object": "simulation_platform.command_file.json_classes.ChangeNetworkEvent",
+                "timestamp": 10,
+                "vm_name": "2"
+            },
+            {
+                "address": "10.1.1.0",
+                "netmask": "255.255.255.0",
+                "py/object": "simulation_platform.command_file.json_classes.ChangeNetworkEvent",
+                "timestamp": 12,
+                "vm_name": "1"
+            }
+        ],
+        "py/object": "simulation_platform.command_file.json_classes.Simulation"
+    },
+    "vms": [
+        {
+            "name": "1",
+            "py/object": "simulation_platform.command_file.json_classes.AndroidVM"
+        },
+        {
+            "name": "2",
+            "py/object": "simulation_platform.command_file.json_classes.AndroidVM"
+        }
+    ]
+}

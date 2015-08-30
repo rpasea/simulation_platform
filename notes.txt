@@ -1,0 +1,27 @@
+1. Need virtualbox sdk
+
+2. Need to install vboxapi:
+	pip install vboxapi
+
+3. For python 2.7 need:
+	pip install ipaddress -> this doesn't work! pip ipaddress is outdated
+	need to manually install package
+	need x86-64 machine! or else get error! in python
+
+4. pip install pyadb
+
+No need to activate adb on guest (yay).
+
+5. need sudo for networking cmds.
+	find a way to offer this !!!
+
+6. need vde
+	sudo apt-get install vde2
+
+7. need virtualbox from sources
+
+8. need ssh keys on all machines (maybe ldap)
+
+9. pip install jsonpickle
+
+10. hosts must be in known hosts file.
